@@ -44,7 +44,6 @@ function populateGrid(countries, type = 'all') {
 		country_cap.textContent = capital;
 	});
 }
-
 get(all_endpoint, populateGrid);
 
 function hide_loading(image_src, image_ele, loader) {
@@ -93,17 +92,20 @@ function debounce(func, delay) {
 }
 
 function fetchData(query) {
-	get(search_endpoint, populatBox, query);
+	get(search_endpoint + query, populatBox);
 }
 
 function populatBox(data) {
 	clearResultBox();
-	if (data.length > 10) {
-		createCards(data, true);
-	} else {
-		createCards(data);
+	if(data.length){
+		if (data.length > 10) {
+			createCards(data, true);
+		} else {
+			createCards(data);
+		}
 	}
 }
+
 function createCards(data, large = false) {
 	let limit = large ? 10 : data.length;
 	for (let i = 0; i < limit; i++) {
