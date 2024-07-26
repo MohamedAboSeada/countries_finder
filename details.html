@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HOME - Countries</title>
+    <!-- icons -->
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+    <!-- main stylesheet -->
+    <link rel="stylesheet" href="assets/style.css">
+</head>
+
+<body>
+    <div class="credits">
+        <p>made by mohamed abo seada</p>
+    </div>
+    <nav class="nav">
+        <div class="container">
+            <a href="index.html" class="nav__logo">Where in the world?</a>
+            <button class="nav__theme_btn">
+                <i class='bx bx-sun'></i>
+                <span class="theme_name">dark mode</span>
+            </button>
+        </div>
+    </nav>
+    <!-- start details -->
+    <div class="details">
+        <div class="container">
+            <button id="back_btn" onclick="javascript:history.back()"><i class='bx bx-arrow-back'></i>
+                Back</button>
+            <div class="details__country">
+                <div class="flag">
+                    <div class="countries_grid__card-loading">
+                        <i class='bx bx-loader-alt bx-spin'></i>
+                    </div>
+                    <img src="" class="flag__image">
+                </div>
+                <div class="info">
+                    <h2 class="name">N/A</h2>
+                    <div class="details__area">
+                        <div class="area">
+                            <p class="detail">Native Name: <span class="native_name">??</span></p>
+                            <p class="detail">population: <span class="population">??</span></p>
+                            <p class="detail">Region: <span class="region">??</span></p>
+                            <p class="detail">Sub Region: <span class="sub_region">??</span></p>
+                            <p class="detail">Capital: <span class="capital">??</span></p>
+                        </div>
+                        <div class="area">
+                            <p class="detail">Top level domain: <span class="top_level">??</span></p>
+                            <p class="detail">currencies: <span class="currencies">??</span></p>
+                            <p class="detail">languages: <span class="langs">??</span></p>
+                        </div>
+                    </div>
+                    <div class="border__countries">
+                        <h2>Border Countries : </h2>
+                        <ul class="borders"></ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- end details -->
+
+    <!-- main script file -->
+    <script src="assets/theme.js"></script>
+    <script type="module" src="assets/details.js"></script>
+</body>
+
+</html>
